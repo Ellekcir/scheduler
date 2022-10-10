@@ -3,7 +3,7 @@
 var todaysDate = document.querySelector('#currentDay'); // moment().format('dddd, MMM Do YYYY');
 todaysDate.textContent= moment().format('LLL');  // Delete the time using "LL"//$("#currentDay").html(todaysDate);
 
-$('.title').css({'background-color' : 'aquamarine'})
+//$('.title').css({'background-color' : 'aquamarine'})
 //--------------------------------------------------------------------
 
 
@@ -81,7 +81,7 @@ $(document).ready(function () {
     }
 
   
-
+    $('.title').css({'background-color' : 'aquamarine'})
 
     getData();
        // console.log(getData);
