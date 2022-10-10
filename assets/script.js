@@ -23,7 +23,7 @@ todaysDate.textContent= moment().format('LLL');  // Delete the time using "LL"//
 
 $(document).ready(function () {
     //vw makes it responsive to the window.
-    style="font-size: 8vw;"
+    style="font-size: 7vw"
     // saveBtn click event listener on click play function
     $(".saveBtn").on("click", function () {
         
@@ -44,7 +44,7 @@ $(document).ready(function () {
         $(".time-block").each(function () {
             //The parseInt() function parses a string argument and returns an integer of the specified radix (the base in mathematical numeral systems).
             var blockTime = parseInt($(this).attr("id"));
-            console.log(blockTime < timeNow)
+           // console.log(blockTime < timeNow)
             // To check the time and add the classes for background indicators
            //removes and adds classes in relation to moment().hour(); which is the current time at the hour.
             if (blockTime < timeNow) {
