@@ -2,8 +2,8 @@
 // Display today's day and date
 var todaysDate = document.querySelector('#currentDay'); // moment().format('dddd, MMM Do YYYY');
 todaysDate.textContent= moment().format('LLL');  // Delete the time using "LL"//$("#currentDay").html(todaysDate);
-//makes a coloured jumbotron bg - $('header').css({'background-color' : 'aquamarine'})
 
+$('.title').css({'background-color' : 'aquamarine'})
 //--------------------------------------------------------------------
 
 
@@ -33,7 +33,7 @@ $(document).ready(function () {
 
         // Saves the taskbar description and the timeblock to the local storage
         localStorage.setItem(time, text);
-        console.log( text + " at " + time + " has been saved." );
+        console.log( text + " at " + time + ":00 has been saved." );
     })});
 
     function trackTheTime() {
@@ -63,26 +63,27 @@ $(document).ready(function () {
                 $(this).addClass("future");
 
             }}
-        
-    )}
     
+    )}
+        
     // Get item from local storage if any when page is opened
 //loops the local storage for each time-block.
     function getData() {
         for ( i= 10; i <= 17; i++) {
-            console.log(i);
+          //  console.log(i);
 
         $("#" + i + " .taskBar").val(localStorage.getItem(i))
 
         } 
 
        $("#09 .taskBar").val(localStorage.getItem("09"));
- }
-    
+  console.log();
+    }
+
   
 
 
     getData();
-        console.log(getData);
+       // console.log(getData);
 
     trackTheTime(); 
